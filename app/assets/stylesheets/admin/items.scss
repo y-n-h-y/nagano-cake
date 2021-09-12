@@ -50,4 +50,51 @@ main {
       }
     }
   }
+  .item-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .item-content_image {
+      width: 400px;
+      max-width: 100%;
+      .img {
+        width: 100%;
+      }
+    }
+    ul {
+      width: 550px;
+      list-style: none;
+      li {
+        padding-bottom: 15px;
+        display: flex;
+        p:nth-child(1) {
+          width: 100px;
+          
+        }
+        p:nth-child(2) {
+          width: 400px;
+          max-width: 100%;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+  .item-edit {
+    padding: 50px 0 70px 0;
+    text-align: center;
+    .edit-button {
+      padding: 12px 30px;
+      text-decoration: none;
+      background-color: #228B22;
+      border: solid 2px #228B22;
+      border-radius: 5px;
+      color: #ffffff;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      &:hover {
+        background-color: #ffffff;
+        color: #228B22;
+      }
+    }
+  }
 }
