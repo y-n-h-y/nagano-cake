@@ -1,0 +1,42 @@
+main {
+  width: 90%;
+  margin: 0 auto;
+  .title {
+    padding: 80px 0 50px 0;
+  }
+  .field {
+    display: flex;
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    .label {
+      display: block;
+      width: 150px;
+    }
+    .form-box {
+      width: 400px;
+      height: 40px;
+    }
+  }
+  .actions {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px 0;
+    .button {
+      width: 150px;
+      height: 40px;
+      background-color: #00BFFF;
+      border: solid 2px #00BFFF;
+      border-radius: 5px;
+      color: #ffffff;
+      cursor: pointer;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      &:hover {
+        background-color: #ffffff;
+        color: #00BFFF;
+      }
+    }
+  }
+}

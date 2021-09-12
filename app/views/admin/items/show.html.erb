@@ -1,0 +1,26 @@
+<main>
+  <h1>商品詳細</h1>
+  <div class="item-content">
+    <div class="item-content_image">
+      <%= attachment_image_tag @item, :image %>
+    </div>
+    <ul>
+      <li>
+        <p>商品名</p>
+        <%= @item.name %>
+      </li>
+      <li>
+        <p>商名説明</p>
+        <%= @item.introduction %>
+      </li>
+      <li>
+        <p>ジャンル</p>
+        <%= @item.genre.name %>
+      </li>
+      <li>
+        <p>税込価格<br>（税抜価格）</p>
+        <%= @item.price %>
+      </li>
+    </ul>
+  </div>
+</main>
