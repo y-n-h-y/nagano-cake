@@ -99,7 +99,62 @@ main {
   }
   .item-list {
     ul {
+      display: flex;
       list-style: none;
+      li:first-child {
+        width: 90px;
+        max-width: 100%;
+        dl {
+          dt {
+            padding-left: 10px;
+          }
+          dd {
+            padding-left: 10px;
+          }
+        }
+      }
+      li:nth-child(2) {
+        width: 300px;
+        max-width: 100%;
+        dl {
+          dd {
+            .link {
+              color: #222222;
+              text-decoration: underline;
+              -webkit-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+              &:hover {
+                color: #a00a40;
+              }
+            }
+          }
+        }
+      }
+      li:nth-child(3) {
+        width: 150px;
+        max-width: 100%;
+      }
+      li:nth-child(4) {
+        width: 300px;
+        max-width: 100%;
+      }
+      li:last-child {
+        width: 100px;
+        max-width: 100%;
+      }
+      li {
+        dl {
+          dt {
+            padding: 10px 0;
+            background-color: #EEEEEE;
+            border-top: solid 1px #222222;
+            border-bottom: solid 1px #222222;
+          }
+          dd {
+            padding: 5px 0;
+          }
+        }
+      }
     }
   }
 }
