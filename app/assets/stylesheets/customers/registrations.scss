@@ -1,17 +1,64 @@
 main {
-  .field {
+  .form {
+    width: 100%;
+    .field {
     display: flex;
+    width: 100%;
+    .label {
+      width: 250px;
+    }
     p {
-      width: 100px;
+      width: 190px;
+      font-size: 0.9rem;
     }
     .field_inner {
       display: flex;
       .name-label {
         display: block;
+        width: 60px;
+        font-size: 0.9rem;
+      }
+      .kana-label {
+        display: block;
+        width: 60px;
+        font-size: 0.9rem;
+      }
+      .first {
+        margin-left: 20px;
+      }
+      .name-box {
+        width: 250px;
+        height: 30px;
       }
     }
-    .label {
-      display: block;
+    .form-box {
+      width: 250px;
+      height: 30px;
     }
+    .address-box {
+      width: 580px;
+      height: 30px;
+    }
+   }
+   .action-button {
+     width: 510px;
+     margin: 0 auto;
+     padding: 40px 0 30px 0;
+     .button {
+       width: 200px;
+       height: 40px;
+       background-color: #228B22;
+       border: solid 2px 	#228B22;
+       border-radius: 5px;
+       color: #ffffff;
+       cursor: pointer;
+       -webkit-transition: all .2s ease-in-out;
+       transition: all .2s ease-in-out;
+       &:hover {
+         background-color: #ffffff;
+         color: #228B22;
+       }
+     }
+   }
   }
 }
