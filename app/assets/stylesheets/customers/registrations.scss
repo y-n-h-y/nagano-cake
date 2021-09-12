@@ -1,0 +1,17 @@
+main {
+  .field {
+    display: flex;
+    p {
+      width: 100px;
+    }
+    .field_inner {
+      display: flex;
+      .name-label {
+        display: block;
+      }
+    }
+    .label {
+      display: block;
+    }
+  }
+}
