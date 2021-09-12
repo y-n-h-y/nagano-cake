@@ -1,0 +1,71 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #4a1529;
+  box-shadow: 0 0 3px 3px rgba(41, 41, 41, 0.1);
+  .containar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    .logo {
+      width: 200px;
+      height: 25px;
+      img {
+        width: 100%;
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 600px;
+      max-width: 95%;
+      margin-left: auto;
+      padding: 20px 0;
+      list-style: none;
+      li {
+        .menu {
+          display: block;
+          padding: 8px 20px;
+          background-color: #ffffff;
+          border-radius: 5px;
+          font-size: 0.8rem;
+          text-decoration: none;
+          color: #4a1529;
+          transition: all .2s ease-in-out;
+          -webkit-transition: all .2s ease-in-out;
+          &:hover {
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+            color: #a00a40;
+          }
+        }
+      }
+    }
+  }
+}
+.top-space {
+  height: 80px;
+}
