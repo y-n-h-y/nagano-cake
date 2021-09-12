@@ -17,10 +17,23 @@
         </div>
         <nav>
           <ul>
+            <% if customer_signed_in? %>
+            <li><%= link_to "マイページ", about_path, class: 'menu' %></li>
+            <li><%= link_to "商品一覧", about_path, class: 'menu' %></li>
+            <li><%= link_to "カート", about_path, class: 'menu' %></li>
+            <li><%= link_to "ログアウト", about_path, class: 'menu' %></li>
+            <% elsif admin_signed_in? %>
+            <li><%= link_to "商品一覧", about_path, class: 'menu' %></li>
+            <li><%= link_to "会員一覧", about_path, class: 'menu' %></li>
+            <li><%= link_to "注文履歴一覧", about_path, class: 'menu' %></li>
+            <li><%= link_to "ジャンル一覧", about_path, class: 'menu' %></li>
+            <li><%= link_to "ログアウト", about_path, class: 'menu' %></li>
+            <% else %>
             <li><%= link_to "About", about_path, class: 'menu' %></li>
             <li><%= link_to "商品一覧", about_path, class: 'menu' %></li>
-            <li><%= link_to "新規登録", about_path, class: 'menu' %></li>
-            <li><%= link_to "ログイン", about_path, class: 'menu' %></li>
+            <li><%= link_to "新規登録", new_customer_registration_path, class: 'menu' %></li>
+            <li><%= link_to "ログイン", new_customer_session_path, class: 'menu' %></li>
+            <% end %>
           </ul>
         </nav>
       </div>
