@@ -21,7 +21,7 @@
             <li><%= link_to "マイページ", about_path, class: 'menu' %></li>
             <li><%= link_to "商品一覧", about_path, class: 'menu' %></li>
             <li><%= link_to "カート", about_path, class: 'menu' %></li>
-            <li><%= link_to "ログアウト", about_path, class: 'menu' %></li>
+            <li><%= link_to "ログアウト", destroy_customer_session_path, method: :delete, class: 'menu' %></li>
             <% elsif admin_signed_in? %>
             <li><%= link_to "商品一覧", about_path, class: 'menu' %></li>
             <li><%= link_to "会員一覧", about_path, class: 'menu' %></li>
