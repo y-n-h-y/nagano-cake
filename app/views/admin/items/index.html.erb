@@ -1,40 +1,26 @@
 <main>
   <h1>商品一覧</h1>
   <div class="item-list">
+    <div class="item-list_name">
+      <ul>
+        <li>商品ID</li>
+        <li>商品名</li>
+        <li>税抜価格</li>
+        <li>ジャンル</li>
+        <li>ステータス</li>
+      </ul>
+    </div>
+    <div class="item-list_content">
     <% @items.each do |item| %>
-    <ul>
-      <li>
-        <dl>
-          <dt>商品ID</dt>
-          <dd><%= item.id %></dd>
-        </dl>
-      </li>
-       <li>
-        <dl>
-          <dt>商品名</dt>
-          <dd><%= link_to item.name, admin_item_path(item), class: 'link' %></dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>税抜価格</dt>
-          <dd><%= item.price %>円</dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>ジャンル</dt>
-          <dd><%= item.genre.name %></dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>ステータス</dt>
-          <dd><%= item.is_active %></dd>
-        </dl>
-      </li>
-    </ul>
+      <ul>
+        <li><%= item.id %></li>
+        <li><%= link_to item.name, admin_item_path(item), class: 'link' %></li>
+        <li><%= item.price %>円</li>
+        <li><%= item.genre.name %></li>
+        <li><%= item.is_active %></li>
+      </ul>
     <% end %>
+    </div>
   </div>
   <%= paginate @items %>
 </main>
