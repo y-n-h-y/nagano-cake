@@ -1,3 +1,72 @@
 // Place all the styles related to the admin/customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+main {
+  .customer-list {
+    .customer-list_name {
+      > ul {
+        display: flex;
+        padding: 10px 0;
+        list-style: none;
+        background-color: #EEEEEE;
+        border-top: solid 1px #222222;
+        border-bottom: solid 1px #222222;
+        > li:first-child {
+            width: 90px;
+            max-width: 100%;
+            padding-left: 5px;
+        }
+        > li:nth-child(2) {
+            width: 300px;
+            max-width: 100%;
+        }
+        > li:nth-child(3) {
+            width: 300px;
+            max-width: 100%;
+        }
+        > li:last-child {
+            width: 100px;
+            max-width: 100%;
+        }
+        > li {
+          font-weight: bold;
+        }
+      }
+    }
+    .customer-list_content {
+      ul {
+        display: flex;
+        list-style: none;
+        li:first-child {
+          width: 90px;
+          max-width: 100%;
+          padding-left: 5px;
+        }
+        li:nth-child(2) {
+          width: 300px;
+          max-width: 100%;
+            .link {
+              color: #222222;
+              text-decoration: underline;
+              -webkit-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+              &:hover {
+                color: #a00a40;
+              }
+            }
+        }
+        li:nth-child(3) {
+          width: 300px;
+          max-width: 100%;
+        }
+        li:last-child {
+          width: 100px;
+          max-width: 100%;
+        }
+        li {
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}
