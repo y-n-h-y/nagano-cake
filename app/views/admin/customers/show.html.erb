@@ -1,1 +1,59 @@
-<h1>さんの会員詳細</h1>
+<main>
+  <h1><%= @customer.full_name %>さんの会員詳細</h1>
+  <div class="customer-content">
+    <ul>
+      <li>
+        <dl>
+          <dt>会員ID</dt>
+          <dd><%= @customer.id %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>氏名</dt>
+          <dd><%= @customer.full_name %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>フリガナ</dt>
+          <dd><%= @customer.full_name_kana %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>郵便番号</dt>
+          <dd><%= @customer.postal_code %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>住所</dt>
+          <dd><%= @customer.address %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>電話番号</dt>
+          <dd><%= @customer.telephone_number %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>メールアドレス</dt>
+          <dd><%= @customer.email %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>会員ステータス</dt>
+          <dd><%= @customer.is_delete %></dd>
+        </dl>
+      </li>
+    </ul>
+    <div class="customer-content_action">
+      <p><%= link_to "編集する", edit_admin_customer_path(@customer), class: 'button' %></p>
+      <p><%= link_to "注文履歴一覧を見る", admin_customers_path, class: 'button' %></p>
+    </div>
+  </div>
+</main>

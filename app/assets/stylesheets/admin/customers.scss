@@ -69,4 +69,103 @@ main {
       }
     }
   }
+  .customer-content {
+    > ul {
+      list-style: none;
+      li {
+        padding: 15px 0;
+        dl {
+          display: flex;
+          dt {
+            width: 150px;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .customer-content_action {
+      display: flex;
+      padding: 50px 0;
+      p:first-child {
+        padding-right: 50px;
+        .button {
+          padding: 10px 25px;
+          background-color: #228B22;
+          border: solid 2px #228B22;
+          border-radius: 5px;
+          text-decoration: none;
+          color: #ffffff;
+          cursor: pointer;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          &:hover {
+            background-color: #ffffff;
+            color: #228B22;
+          }
+        }
+      }
+      p:last-child {
+        .button {
+          padding: 10px 25px;
+          background-color: #00BFFF;
+          border: solid 2px #00BFFF;
+          border-radius: 5px;
+          text-decoration: none;
+          color: #ffffff;
+          cursor: pointer;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          &:hover {
+            background-color: #ffffff;
+            color: #00BFFF;
+          }
+        }
+      }
+    }
+  }
+  .form-field {
+    .form_group {
+      display: flex;
+      padding-bottom: 20px;
+      p {
+        width: 150px;
+      }
+      .form_group_inner {
+         .hidden-label {
+          display: none;
+        }
+        .left {
+          margin-right: 20px;
+        }
+        .name-box,
+        .form-box {
+          width: 200px;
+          height: 30px;
+        }
+        .address-box {
+          width: 500px;
+          height: 30px;
+        }
+      }
+    }
+    .submit-button {
+      text-align: center;
+      padding: 50px  0 70px 0;
+      .button {
+        width: 150px;
+        height: 40px;
+        background-color: #228B22;
+        border: solid 2px #228B22;
+        border-radius: 5px;
+        color: #ffffff;
+        cursor: pointer;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        &:hover {
+          background-color: #ffffff;
+          color: #228B22;
+        }
+      }
+    }
+  }
 }
