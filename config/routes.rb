@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
   
+  
+  devise_for :customers, controllers: {
+  sessions:      'customers/sessions',
+  passwords:     'customers/passwords',
+  registrations: 'customers/registrations'
+}
+
+  devise_for :admin, controllers: {
+  sessions:      'admins/sessions',
+  passwords:     'admins/passwords',
+  registrations: 'admins/registrations'
+}
+
   namespace :admin do
     resources :customers, only: [:index, :show, :edit, :update]
     resources :order_details
@@ -18,17 +31,5 @@ Rails.application.routes.draw do
     resources :orders
     resources :addresses
   end
-  
-  devise_for :customers, controllers: {
-  sessions:      'customers/sessions',
-  passwords:     'customers/passwords',
-  registrations: 'customers/registrations'
-}
-
-  devise_for :admin, controllers: {
-  sessions:      'admins/sessions',
-  passwords:     'admins/passwords',
-  registrations: 'admins/registrations'
-}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
