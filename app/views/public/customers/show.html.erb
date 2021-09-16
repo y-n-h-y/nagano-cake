@@ -1,2 +1,55 @@
-<h1>Public::Customers#show</h1>
-<p>Find me in app/views/public/customers/show.html.erb</p>
+<main>
+  <h1>マイページ</h1>
+  <div class="action">
+    <h2>登録情報</h2>
+    <p><%= link_to "編集する", edit_customer_path(current_customer), class: 'edit-action' %></p>
+  </div>
+  <div class="customer-info">
+    <ul>
+      <li>
+        <dl>
+          <dt>氏名</dt>
+          <dd><%= @customer.last_name %>&emsp;<%= @customer.first_name %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>カナ</dt>
+          <dd><%= @customer.last_name_kana %>&emsp;<%= @customer.first_name_kana %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>郵便番号</dt>
+          <dd><%= @customer.postal_code %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>住所</dt>
+          <dd><%= @customer.address %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>電話番号</dt>
+          <dd><%= @customer.telephone_number %></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>メールアドレス</dt>
+          <dd><%= @customer.email %></dd>
+        </dl>
+      </li>
+    </ul>
+    <div class="action">
+      <h2>配送先</h2>
+      <p><%= link_to "一覧を見る", addresses_path, class: 'address-action' %></p>
+    </div>
+    <div class="action">
+      <h2>注文履歴</h2>
+      <p><%= link_to "一覧を見る", orders_path, class: 'order-action' %></p>
+    </div>
+  </div>
+</main>
