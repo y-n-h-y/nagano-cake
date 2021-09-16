@@ -1,3 +1,68 @@
 // Place all the styles related to the public/customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+main {
+  .action {
+    display: flex;
+    align-items: center;
+    padding: 0 0 40px 0;
+    h2 {
+      width: 150px;
+      padding: 0;
+    }
+    .edit-action {
+      text-decoration: none;
+      padding: 10px 25px;
+      background-color: #228B22;
+      border: solid 2px #228B22;
+      border-radius: 5px;
+      color: #ffffff;
+      cursor: pointer;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      &:hover {
+        background-color: #ffffff;
+        color: #228B22;
+      }
+    }
+    .address-action,
+    .order-action {
+      text-decoration: none;
+      padding: 10px 25px;
+      background-color: #00BFFF;
+      border: solid 2px #00BFFF;
+      border-radius: 5px;
+      color: #ffffff;
+      cursor: pointer;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      &:hover {
+        background-color: #ffffff;
+        color: #00BFFF;
+      }
+    }
+  }
+  .customer-info {
+    ul {
+      padding-bottom: 50px;
+      list-style: none;
+      li {
+        dl {
+          display: flex;
+          dt {
+            width: 150px;
+            padding: 15px 0 15px 5px;
+            background-color: #eeeeee;
+            border: solid 0.5px #808080;
+          }
+          dd {
+            width: 500px;
+            padding: 15px 0 15px 5px;
+            border: solid 0.5px #808080;
+          }
+        }
+      }
+    }
+  }
+}
