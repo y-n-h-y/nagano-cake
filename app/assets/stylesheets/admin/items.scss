@@ -6,8 +6,26 @@ main {
   width: 90%;
   margin: 0 auto;
   h1 {
-    padding: 70px 0 50px 0;
+    padding: 70px 0 40px 0;
     color: #222222;
+  }
+  .new-item-action {
+    padding-bottom: 20px;
+    text-align: right;
+    .new-item-button {
+      .fa-plus {
+        padding: 20px;
+        border: solid 2px #888888;
+        border-radius: 50%;
+        color: #888888;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        &:hover {
+          border: solid 2px #a00a40;
+          color: #a00a40;
+        }
+      }
+    }
   }
   .form {
     width: 700px;

@@ -1,5 +1,10 @@
 <main>
   <h1>商品一覧</h1>
+  <div class="new-item-action">
+    <%= link_to new_admin_item_path, class: 'new-item-button' do %>
+    <i class="fas fa-plus"></i>
+    <% end %>
+  </div>
   <div class="item-list">
     <div class="item-list_name">
       <ul>
