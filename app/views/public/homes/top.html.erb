@@ -1,2 +1,29 @@
-<h1>Public::Homes#top</h1>
-<p>Find me in app/views/public/homes/top.html.erb</p>
+<div class="top">
+  <div class="top-genre">
+    <dl>
+      <dt>ジャンル</dt>
+      <% @genres.each do |genre| %>
+      <dd><%= genre.name %></dd>
+      <% end %>
+    </dl>
+  </div>
+  <div class="top-main">
+    <div class="top-main_kv">
+      <div class="top-main_kv-img">
+        <%= image_tag('cakes.jpeg') %>
+      </div>
+    </div>
+    <div class="top-main_item">
+      <h2>新着商品</h2>
+      <ul>
+        <% @items.each do |item| %>
+        <li>
+          <div class="item-img"><%= attachment_image_tag item, :image %></div>
+          <p><%= item.name %></p>
+          <p><%= item.price %>円</p>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

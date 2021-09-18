@@ -1,3 +1,43 @@
 // Place all the styles related to the public/addresses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+main {
+  .form {
+    .form_group {
+      .address-label {
+        width: 200px;
+      }
+    }
+  }
+  .address-list {
+    padding-bottom: 50px;
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        padding: 10px 0;
+        border: solid 1px #888888;
+      }
+      li:first-child {
+        width: 100px;
+        padding-left: 5px;
+      }
+      li:nth-child(2) {
+        width: 300px;
+        padding-left: 5px;
+      }
+      li:nth-child(3) {
+        width: 100px;
+        padding-left: 5px;
+      }
+      li:last-child {
+        width: 300px;
+      }
+    }
+    .address-list_head {
+      li {
+        background-color: #eeeeee;
+      }
+    }
+  }
+}
