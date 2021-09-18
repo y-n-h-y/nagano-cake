@@ -1,7 +1,8 @@
+<main>
 <div class="top">
   <div class="top-genre">
     <dl>
-      <dt>ジャンル</dt>
+      <dt>ジャンル検索</dt>
       <% @genres.each do |genre| %>
       <dd><%= genre.name %></dd>
       <% end %>
@@ -11,6 +12,12 @@
     <div class="top-main_kv">
       <div class="top-main_kv-img">
         <%= image_tag('cakes.jpeg') %>
+        <div class="message">
+          <p>ようこそ、ながのCAKEへ！<br>
+          このサイトはケーキ販売のECサイトになります。<br>
+          会員で無い方も商品の閲覧はできますが、<br>
+          購入には会員登録が必要になります。</p>
+        </div>
       </div>
     </div>
     <div class="top-main_item">
@@ -20,10 +27,11 @@
         <li>
           <div class="item-img"><%= attachment_image_tag item, :image %></div>
           <p><%= item.name %></p>
-          <p><%= item.price %>円</p>
+          <p>¥<%= item.price %>円</p>
         </li>
         <% end %>
       </ul>
     </div>
   </div>
 </div>
+</main>
