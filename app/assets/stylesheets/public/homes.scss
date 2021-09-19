@@ -23,7 +23,7 @@ main {
     display: flex;
     justify-content: space-between;
     padding-top: 100px;
-    .top-genre {
+    .fix-genre {
       width: 250px;
       dl {
         border: solid 1px #888888;
@@ -90,6 +90,20 @@ main {
             }
             p {
               padding-top: 5px;
+            }
+          }
+        }
+        .item-list-link {
+          padding: 10px 0 50px 0;
+          text-align: right;
+          a {
+            position: relative;
+            &::before {
+              position: absolute;
+              content: '>';
+              top: 50%;
+              right: -10px;
+              transform: translateY(-50%);
             }
           }
         }

@@ -1,3 +1,61 @@
 // Place all the styles related to the public/items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+main {
+  .items {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    .fix-genre {
+      width: 200px;
+      max-width: 100%;
+      dl {
+        border: solid 1px #888888;
+        dt {
+          padding: 5px 0;
+          border-bottom: solid 1px #888888;
+          text-align: center;
+        }
+        dd {
+          width: 90%;
+          margin: 0 auto;
+          padding: 7px 0;
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .items-list {
+        width: 1000px;
+        max-width: 80%;
+      h1 {
+        padding: 0 0 30px 0;
+        .count {
+          font-size: 1.5rem;
+        }
+      }
+        ul {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          list-style: none;
+          li {
+            width: calc(90%/4);
+            padding: 20px 0;
+            .item-img {
+              width: 100%;
+              img {
+                width: 100%;
+              }
+            }
+            p {
+              padding-top: 5px;
+            }
+            .items-link {
+              display: block;
+            }
+          }
+        }
+    }
+  }
+}
