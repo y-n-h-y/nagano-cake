@@ -1,16 +1,17 @@
+<main>
 <h1>ショッピングカート</h1>
 <div class="cart-items">
-  <ul>
+  <ul class="cart-items_head">
     <li>商品名</li>
     <li>単価（税込）</li>
     <li>数量</li>
     <li>小計</li>
     <li></li>
   </ul>
+  <% @cart_items.each do |cart_item| %>
   <ul>
-    <% @cart_items.each do |cart_item| %>
     <li><%= attachment_image_tag cart_item.item, :image %><%= cart_item.item.name %></li>
-    <li><%= cart_item.amount %></li>
+    <li><%= cart_item.item.tax_price %></li>
     <li><%= form_with model: cart_item, local:true do |f| %>
         <%= f.select :amount, *[1..10] %>
         <%= f.submit "変更" %>
@@ -18,6 +19,16 @@
     </li>
     <li><%= cart_item.subtotal %></li>
     <li><%= link_to "削除する", cart_item_path(cart_item), method: :delete %></li>
-    <% end %>
   </ul>
+  <% end %>
+  <div class="after">
+    <div class="items-action">
+      <%= link_to "買い物を続ける", items_path %>
+    </div>
+    <ul class="total">
+      <li>合計金額</li>
+      <li><%= @cart_item.total_price %></li>
+    </ul>
+  </div>
 </div>
+</main>
