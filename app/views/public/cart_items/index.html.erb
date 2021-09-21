@@ -17,7 +17,7 @@
         <% end %>
     </li>
     <li><%= cart_item.subtotal %></li>
-    <li><%= link_to "削除する", cart_items_path(cart_item), method: :delete %></li>
+    <li><%= link_to "削除する", cart_item_path(cart_item), method: :delete %></li>
     <% end %>
   </ul>
 </div>
