@@ -40,4 +40,38 @@ main {
       }
     }
   }
+  .address-edit-form {
+    .form_group {
+      display: flex;
+      padding: 15px 0;
+      label {
+        width: 200px;
+      }
+      .form-box {
+        width: 150px;
+        height: 40px;
+      }
+      .address {
+        width: 400px;
+      }
+      .edit-button {
+      margin-left: auto;
+      .button {
+        width: 150px;
+        height: 40px;
+        background-color: #228B22;
+        border: solid 2px #228B22;
+        border-radius: 5px;
+        color: #ffffff;
+        cursor: pointer;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        &:hover {
+          background-color: #ffffff;
+          color: #228B22;
+        }
+      }
+    }
+    }
+  }
 }
