@@ -33,6 +33,7 @@
       <li><%= addresse.addresses %></li>
       <li><%= addresse.name %></li>
       <li>
+        <%= link_to "編集する", edit_address_path(addresse) %>
         <%= link_to "削除する", addresses_path(addresse), method: :delete %>
       </li>
     </ul>
