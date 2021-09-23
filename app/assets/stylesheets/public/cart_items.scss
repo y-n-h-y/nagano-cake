@@ -108,5 +108,49 @@ main {
         }
       }
     }
+    .no-item {
+      text-align: center;
+      p {
+        padding-bottom: 30px;
+        font-size: 1.2rem;
+      }
+      a {
+        padding: 10px 30px;
+        background-color: #00BFFF;
+        border: solid 2px #00BFFF;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #ffffff;
+        cursor: pointer;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        &:hover {
+          background-color: #ffffff;
+          color: #00BFFF;
+        }
+      }
+    }
+    .delete-all {
+      margin-top: -30px;
+      padding-bottom: 30px;
+      text-align: right;
+      a {
+          padding: 10px 20px;
+          background-color: #DD0000;
+          border: solid 2px #DD0000;
+          border-radius: 5px;
+          text-decoration: none;
+          line-height: 40px;
+          font-size: 0.8rem;
+          color: #ffffff;
+          cursor: pointer;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          &:hover {
+            background-color: #ffffff;
+            color: #DD0000;
+          }
+      }
+    }
   }
 }

@@ -2,6 +2,9 @@
 <h1>ショッピングカート</h1>
 <div class="cart-items">
   <% if @cart_items.any? %>
+  <div class="delete-all">
+    <%= link_to "カートを空にする", destroy_all_cart_items_path, method: :delete %>
+  </div>
   <ul class="cart-items_head">
     <li>商品名</li>
     <li>単価（税込）</li>
@@ -32,7 +35,8 @@
     </div>
   </div>
   <% else %>
-  <div class="items-action">
+  <div class="no-item">
+    <p>現在カートに商品がありません</p>
     <%= link_to "買い物を続ける", items_path %>
   </div>
   <% end %>
