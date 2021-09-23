@@ -10,23 +10,102 @@ main {
       li:first-child {
         display: flex;
         align-items: center;
-        width: 350px;
+        width: 500px;
+        max-width: 100%;
         img {
           display: block;
           width: 50px;
         }
       }
       li:not(:first-child) {
-        width: 130px;
+        width: 200px;
+        max-width: 100%;
       }
       li {
         padding: 10px 0 10px 5px;
         border: solid 1px #888888;
+        .amount-edit {
+          width: 60px;
+          height: 40px;
+          background-color: #228B22;
+          border: solid 2px #228B22;
+          border-radius: 5px;
+          color: #ffffff;
+          cursor: pointer;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          &:hover {
+            background-color: #ffffff;
+            color: #228B22;
+          }
+        }
+        select {
+          width: 50px;
+          height: 30px;
+        }
+        .delete {
+          padding: 10px 20px;
+          background-color: #DD0000;
+          border: solid 2px #DD0000;
+          border-radius: 5px;
+          text-decoration: none;
+          line-height: 40px;
+          font-size: 0.8rem;
+          color: #ffffff;
+          cursor: pointer;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          &:hover {
+            background-color: #ffffff;
+            color: #DD0000;
+          }
+        }
       }
     }
     .cart-items_head {
       li {
         background-color: #eeeeee;
+      }
+    }
+    .cart-items_content {
+      li:last-child,
+      li:nth-child(3) {
+        text-align: center;
+      }
+    }
+    .after {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0;
+      .items-action {
+        a {
+          padding: 10px 30px;
+          background-color: #00BFFF;
+          border: solid 2px #00BFFF;
+          border-radius: 5px;
+          text-decoration: none;
+          color: #ffffff;
+          cursor: pointer;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          &:hover {
+            background-color: #ffffff;
+            color: #00BFFF;
+          }
+        }
+      }
+      .total-price {
+        display: flex;
+        p {
+          width: 150px;
+          max-width: 100%;
+          padding: 10px 0 10px 5px;
+          border: solid 1px #888888;
+        }
+        p:first-child {
+          background-color: #eeeeee;
+        }
       }
     }
   }

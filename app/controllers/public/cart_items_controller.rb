@@ -2,6 +2,11 @@ class Public::CartItemsController < ApplicationController
   def index
     @cart_items = CartItem.all
     @items = Item.all
+    @total = 0
+    @cart_items.each do |cart_item| 
+      total = cart_item.item.tax_price * cart_item.amount
+    @total += total
+    end
   end
 
   def update
