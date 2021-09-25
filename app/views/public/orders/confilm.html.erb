@@ -1,2 +1,10 @@
-<h1>Public::Orders#confilm</h1>
-<p>Find me in app/views/public/orders/confilm.html.erb</p>
+<main>
+  <h1>注文情報確認</h1>
+  <div>
+    <%= @order.payment_i18n %>
+  </div>
+  <div>
+    <p><%= @order.postal_code %><%= @order.address %></p>
+    <p><%= @order.name %></p>
+  </div>
+</main>

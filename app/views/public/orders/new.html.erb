@@ -1,6 +1,6 @@
 <main>
   <h1>注文情報入力</h1>
-  <%= form_with model: @order, url:confilm_order_path, loacl:true do |f| %>
+  <%= form_with model: @order, url:confilm_order_path, local:true do |f| %>
   <div class="form_group">
     <h2>支払い方法</h2>
     <div>
@@ -20,9 +20,9 @@
       <%= current_customer.address %>
     </div>
     <div>
-      <%= f.radio_button :select_address ,1 %>
+      <%= f.radio_button :select_address, 1 %>
       <%= f.label :登録済みの住所から選択　%><br>
-      <%= f.select :addresse_id, options_from_collection_for_select(Addresse.all, :id, :full_address) %>
+      <%= f.select :address_id, options_from_collection_for_select(Address.all, :id, :full_address) %>
     </div>
     <div>
       <%= f.radio_button :select_address, 2 %>
@@ -33,7 +33,7 @@
       </div>
       <div class="form_group_inner">
         <%= f.label :address, "住所" %>
-        <%= f.text_field :addresses %>
+        <%= f.text_field :address %>
       </div>
       <div class="form_group_inner">
         <%= f.label :name, "宛名" %>
