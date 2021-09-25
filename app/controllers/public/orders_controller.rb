@@ -21,6 +21,13 @@ class Public::OrdersController < ApplicationController
       @order.address = params[:order][:address]
       @order.name = params[:order][:name]
     end
+    @cart_items = CartItem.all
+    @items = Item.all
+    @total = 0
+    @cart_items.each do |cart_item| 
+      total = cart_item.item.tax_price * cart_item.amount
+    @total += total
+    end
     
   end
 
@@ -28,6 +35,9 @@ class Public::OrdersController < ApplicationController
   end
 
   def create
+    @order = Order.new(order_params)
+    @order.save
+    redirect_to complete_order_path
   end
 
   def index

@@ -32,9 +32,12 @@ Rails.application.routes.draw do
       end
     end
     resources :customers, only: [:show, :edit, :update, :confilm, :withdrawal]
-    resources :orders
-    post 'orders/confilm', to: 'orders#confilm', as: 'confilm_order'
     get 'orders/complete', to: 'orders#complete', as: 'complete_order'
+    resources :orders, only: [:new, :create, :index, :show] do
+      collection do
+        post :confilm
+      end
+    end
     resources :addresses, only: [:index, :edit, :create, :update, :destroy]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
