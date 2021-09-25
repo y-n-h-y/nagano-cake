@@ -8,8 +8,8 @@
       <%= f.text_field :postal_code, class: 'form-box' %>
     </div>
     <div class="form_group">
-      <%= f.label :addresses, "住所", class: 'address-label' %>
-      <%= f.text_field :addresses, class: 'form-box' %>
+      <%= f.label :address, "住所", class: 'address-label' %>
+      <%= f.text_field :address, class: 'form-box' %>
     </div>
     <div class="form_group">
       <%= f.label :name, "宛名", class: 'address-label' %>
@@ -30,7 +30,7 @@
     <% @addresses.each do |addresse| %>
     <ul>
       <li><%= addresse.postal_code %></li>
-      <li><%= addresse.addresses %></li>
+      <li><%= addresse.address %></li>
       <li><%= addresse.name %></li>
       <li>
         <%= link_to "編集する", edit_address_path(addresse) %>
