@@ -1,5 +1,6 @@
 <main>
   <h1>注文情報確認</h1>
+  <%= form_with model: @order, url: {action: 'create'}, local:true do |f| %>
   <div class="order-item">
     <div class="order-item_name">
       <ul>
@@ -45,6 +46,7 @@
   </div>
   </div>
   <div class="complete-action">
-    <%= link_to "注文を確定する", orders_path, method: :post %>
+    <%= f.submit "注文を確定する" %>
   </div>
+  <% end %>
 </main>
