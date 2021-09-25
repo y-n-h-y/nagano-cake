@@ -1,10 +1,50 @@
 <main>
   <h1>注文情報確認</h1>
+  <div class="order-item">
+    <div class="order-item_name">
+      <ul>
+        <li>商品名</li>
+        <li>単価（税込）</li>
+        <li>数量</li>
+        <li>小計</li>
+      </ul>
+      <% @cart_items.each do |cart_item| %>
+      <ul>
+        <li>
+          <%= attachment_image_tag cart_item.item, :image %>
+          <%= cart_item.item.name %>
+          </li>
+        <li><%= cart_item.item.tax_price %></li>
+        <li><%= cart_item.amount %></li>
+        <li><%= cart_item.subtotal %></li>
+      </ul>
+      <% end %>
+    </div>
+    <div class="order-item_price">
+      <dl>
+        <dt>送料</dt>
+        <dd>750円</dd>
+      </dl>
+      <dl>
+        <dt>商品合計</dt>
+        <dd><%= @total %></dd>
+      </dl>
+      <dl>
+        <dt>請求金額</dt>
+        <dd><%= @total + 750 %></dd>
+      </dl>
+    </div>
+  </div>
+  <div class="order-info">
   <div>
     <%= @order.payment_i18n %>
   </div>
   <div>
     <p><%= @order.postal_code %><%= @order.address %></p>
     <p><%= @order.name %></p>
+  </div>
+  </div>
+  <div class="complete-action">
+    <%= link_to "注文を確定する", orders_path, method: :post %>
   </div>
 </main>
