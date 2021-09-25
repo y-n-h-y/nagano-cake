@@ -1,7 +1,7 @@
 <main>
   <h1>配送先登録/一覧</h1>
   <div class="form">
-    <%= form_with model: @addresse, local:true do |f| %>
+    <%= form_with model: @addresse, url:addresses_path, local:true do |f| %>
     <%= f.hidden_field :customer_id, :value => @customer.id %>
     <div class="form_group">
       <%= f.label :postal_code, "郵便番号（ハイフンなし）", class: 'address-label' %>
