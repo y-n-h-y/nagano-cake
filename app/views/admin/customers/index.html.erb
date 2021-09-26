@@ -15,7 +15,7 @@
         <li><%= customer.id %></li>
         <li><%= link_to customer.full_name, admin_customer_path(customer), class: 'link' %></li>
         <li><%= customer.email %></li>
-        <li><%= customer.is_active %></li>
+        <li><%= customer.is_active_i18n %></li>
       </ul>
     <% end %>
     </div>
