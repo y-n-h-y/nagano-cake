@@ -18,4 +18,5 @@ class Customer < ApplicationRecord
   
   enum is_active: { vaild: true, withdrawal: false }
   
+  
 end

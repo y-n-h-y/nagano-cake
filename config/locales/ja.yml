@@ -4,10 +4,20 @@ ja:
       payment:
         credit_card: 'クレジットカード'
         transfer: '銀行振込'
-        
-ja:
- enums:
-  customer:
-   is_active:
-    vaild: '有効'
-    withdrawal: '退会'
+      status:
+        a: '入金待ち'
+        b: '入金確認'
+        c: '製作中'
+        d: '発送準備中'
+        e: '発送済み'
+    
+    order_detail:
+      making_status:
+        no: '未着手'
+        middle: '製作中'
+        complete: '完了'
+    
+    customer:
+      is_active:
+        vaild: '有効'
+        withdrawal: '退会'

@@ -40,9 +40,9 @@ Rails.application.routes.draw do
     resources :orders, only: [:new, :create, :index, :show] do
       collection do
         post :confilm
+        get :complete
       end
     end
-    get 'orders/complete', to: 'orders#complete', as: 'complete_order'
     resources :addresses, only: [:index, :edit, :create, :update, :destroy]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
