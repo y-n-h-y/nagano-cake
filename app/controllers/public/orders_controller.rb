@@ -21,12 +21,12 @@ class Public::OrdersController < ApplicationController
       @order.address = params[:order][:address]
       @order.name = params[:order][:name]
     end
-    @cart_items = CartItem.all
-    @items = Item.all
+    @cart_items = current_customer.cart_items
     @total = 0
     @cart_items.each do |cart_item| 
       total = cart_item.item.tax_price * cart_item.amount
     @total += total
+    @tax_price = cart_item.item.tax_price
     end
     
   end
@@ -50,21 +50,21 @@ class Public::OrdersController < ApplicationController
       @order_detail.order_id = @order.id
       @order_detail.save
     end
-    #@order.save
     CartItem.destroy_all
     redirect_to complete_orders_path
   end
 
   def index
-    @orders = Order.all
+    @orders = current_customer.orders
   end
 
   def show
+    @order = Order.find(params[:id])
   end
   
   private
   
   def order_params
-    params.require(:order).permit(:payment, :postal_code, :address, :name)
+    params.require(:order).permit(:payment, :postal_code, :address, :name, :price)
   end
 end
