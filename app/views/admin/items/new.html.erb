@@ -25,10 +25,10 @@
     </div>
     <div class="form_group">
       <p>販売ステータス</p>
-      <%= f.radio_button :is_active, :on_sale %>
-      <%= f.label :is_active, "販売中", {value: :"0", style: "display: inline-block;"} %>
-      <%= f.radio_button :is_active, :off_sale %>
-      <%= f.label :is_active, "販売停止中", {value: :"1", style: "display: inline-block;"} %>
+      <%= f.radio_button :is_active, Item.is_actives.key(true) %>
+      <%= f.label :is_active, Item.is_actives_i18n[:onsale] %>
+      <%= f.radio_button :is_active, Item.is_actives.key(false) %>
+      <%= f.label :is_active, Item.is_actives_i18n[:offsale] %>
     </div>
     <div class="submit-button">
       <%= f.submit "新規登録", class: 'button' %>

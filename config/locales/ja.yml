@@ -17,6 +17,11 @@ ja:
         middle: '製作中'
         complete: '完了'
     
+    item:
+      is_active:
+        onsale: '販売中'
+        offsale: '販売停止中'
+    
     customer:
       is_active:
         vaild: '有効'

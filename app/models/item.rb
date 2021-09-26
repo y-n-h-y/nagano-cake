@@ -8,4 +8,6 @@ class Item < ApplicationRecord
     (self.price * 1.10).round
   end
   
+  enum is_active: { onsale: true, offsale: false }
+  
 end
