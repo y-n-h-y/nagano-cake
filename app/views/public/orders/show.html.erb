@@ -1,2 +1,58 @@
-<h1>Public::Orders#show</h1>
-<p>Find me in app/views/public/orders/show.html.erb</p>
+<main>
+  <h1>注文履歴詳細</h1>
+  <div class="order-content">
+    <div class="order-content_info">
+      <h2>注文情報</h2>
+      <dl>
+        <dt>注文日</dt>
+        <dd><%= @order.created_at %></dd>
+      </dl>
+      <dl>
+        <dt>配送先</dt>
+        <dd><p>郵便<%= @order.postal_code %></p><p><%= @order.middle_address %></p></dd>
+      </dl>
+      <dl>
+        <dt>支払い方法</dt>
+        <dd><%= @order.payment %></dd>
+      </dl>
+      <dl>
+        <dt>ステータス</dt>
+        <dd><%= @order.status_i18n %></dd>
+      </dl>
+    </div>
+    <div class="order-content_price">
+      <h2>請求額情報</h2>
+      <dl>
+        <dt>商品合計</dt>
+        <dd><%= @total %></dd>
+      </dl>
+      <dl>
+        <dt>配送料</dt>
+        <dd><%= @order.postage %></dd>
+      </dl>
+      <dl>
+        <dt>ご請求額</dt>
+        <dd><%= @total %></dd>
+      </dl>
+    </div>
+    <div class="order-content_inner">
+      <h2>注文内容</h2>
+      <dL>
+        <dt>商品</dt>
+        <dd><%= @order.name %></dd>
+      </dL>
+      <dl>
+        <dt>単価（税込）</dt>
+        <dd><%= @order.price %></dd>
+      </dl>
+      <dl>
+        <dt>個数</dt>
+        <dd><%= @order_detail.amount %></dd>
+      </dl>
+      <dl>
+        <dt>小計</dt>
+        <dd><%= @subtotal %></dd>
+      </dl>
+    </div>
+  </div>
+</main>
