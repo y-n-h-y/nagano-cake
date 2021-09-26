@@ -4,3 +4,10 @@ ja:
       payment:
         credit_card: 'クレジットカード'
         transfer: '銀行振込'
+        
+ja:
+ enums:
+  customer:
+   is_active:
+    vaild: '有効'
+    withdrawal: '退会'

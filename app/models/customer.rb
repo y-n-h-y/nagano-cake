@@ -16,4 +16,6 @@ class Customer < ApplicationRecord
     last_name_kana + first_name_kana
   end
   
+  enum is_active: { vaild: true, withdrawal: false }
+  
 end

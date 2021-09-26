@@ -48,9 +48,12 @@
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-box' %>
       </div>
     </div>
-    <div class="submit-button">
+    <div class="edit-button">
       <%= f.submit "編集内容を保存", class: 'button' %>
     </div>
   </div>
   <% end %>
+  <div class="withdrawal-action">
+    <%= link_to "退会する", confilm_customers_path %>
+  </div>
 </main>
