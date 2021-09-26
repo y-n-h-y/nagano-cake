@@ -16,7 +16,7 @@
       <li><%= order.name %></li>
       <li><%= order.price %></li>
       <li><%= order.status %></li>
-      <li><%= link_to "表示する", order_path(@order.id) %></li>
+      <li><%= link_to "表示する", order_path(order) %></li>
     </ul>
     <% end %>
   </div>
