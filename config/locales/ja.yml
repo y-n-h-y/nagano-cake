@@ -13,7 +13,7 @@ ja:
     
     order_detail:
       making_status:
-        no: '未着手'
+        not_status: '未着手'
         middle: '製作中'
         complete: '完了'
     

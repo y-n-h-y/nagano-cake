@@ -1,14 +1,14 @@
 <main>
   <h1>配送先編集</h1>
   <div class="address-edit-form">
-    <%= form_with model: @addresse, url:address_path(@addresse), local:true do |f| %>
+    <%= form_with model: @address, url:address_path(@address), local:true do |f| %>
     <div class="form_group">
       <%= f.label :postal_code, "郵便番号（ハイフンなし）" %>
       <%= f.text_field :postal_code, class: 'form-box' %>
     </div>
     <div class="form_group">
-      <%= f.label :addresses, "住所" %>
-      <%= f.text_field :addresses, class: 'form-box address' %>
+      <%= f.label :address, "住所" %>
+      <%= f.text_field :address, class: 'form-box address' %>
     </div>
     <div class="form_group">
       <%= f.label :name, "宛名" %>

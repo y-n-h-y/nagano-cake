@@ -36,9 +36,10 @@ class Public::OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-    @order.customer = current_customer
+    @order.customer_id = current_customer.id
     @order.postage = 750
     @order.status = 0
+    @order.save
     @cart_items = current_customer.cart_items
     @cart_items.each do |cart_item|
       @order_detail = OrderDetail.new
@@ -46,10 +47,10 @@ class Public::OrdersController < ApplicationController
       @order_detail.making_status = 0
       @order_detail.price = cart_item.item.tax_price
       @order_detail.amount = cart_item.amount
-      @order_detail.order_id = order.id
-      @order_detail.save！
+      @order_detail.order_id = @order.id
+      @order_detail.save
     end
-    @order.save
+    #@order.save
     CartItem.destroy_all
     redirect_to complete_orders_path
   end
