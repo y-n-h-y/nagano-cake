@@ -15,7 +15,7 @@ main {
       display: flex;
       list-style: none;
       li {
-        padding: 10px 0;
+        padding: 15px 0;
         border: solid 1px #888888;
       }
       li:first-child {
@@ -32,6 +32,40 @@ main {
       }
       li:last-child {
         width: 300px;
+        .edit-action {
+          text-decoration: none;
+          margin-left: 10px;
+          padding: 7px 25px;
+          background-color: #228B22;
+          border: solid 2px #228B22;
+          border-radius: 5px;
+          font-size: 0.9rem;
+          color: #ffffff;
+          cursor: pointer;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          &:hover {
+            background-color: #ffffff;
+            color: #228B22;
+          }
+        }
+        .destroy-action {
+          text-decoration: none;
+          margin-left: 10px;
+          padding: 7px 25px;
+          background-color: #DD0000;
+          border: solid 2px #DD0000;
+          border-radius: 5px;
+          font-size: 0.9rem;
+          color: #ffffff;
+          cursor: pointer;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          &:hover {
+            background-color: #ffffff;
+            color: #DD0000
+          }
+        }
       }
     }
     .address-list_head {
