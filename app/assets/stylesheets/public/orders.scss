@@ -2,10 +2,92 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 main {
+  .form_group {
+    padding: 10px 0;
+    div {
+      padding: 10px 0;
+      label {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .shipping {
+    select {
+      width: 400px;
+      height: 30px;
+      margin-left: 20px;
+    }
+    > div {
+      > p {
+        padding-left: 20px;
+      }
+    }
+    .shipping-new {
+      > div {
+        padding: 10px 0 0 20px;
+        > label {
+          display: block;
+          float: left;
+          width: 200px;
+          font-size: 1rem;
+        }
+        input[type=text] {
+          width: 300px;
+          height: 30px;
+        }
+      }
+    }
+  }
   .complete-view {
     text-align: center;
     h1 {
       padding: 100px 0;
+    }
+  }
+  .confirm-action {
+    padding: 20px 0 50px 0;
+    text-align: center;
+    input[type=submit] {
+      width: 150px;
+      height: 40px;
+      background-color: #00BFFF;
+      border: solid 2px #00BFFF;
+      border-radius: 5px;
+      color: #ffffff;
+      cursor: pointer;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      &:hover {
+        background-color: #ffffff;
+        color: #00BFFF;
+      }
+    }
+  }
+  .order-list {
+    ul {
+      display: flex;
+      li {
+        max-width: 100%;
+        padding: 15px 0 15px 5px;
+        border: solid 1px #888888;
+      }
+      li:first-child,
+      li:nth-child(4) {
+        width: 150px;
+      }
+      li:nth-child(2) {
+        width: 350px;
+      }
+      li:nth-child(3),
+      li:nth-child(5),
+      li:last-child {
+        width: 200px;
+      }
+    }
+    ul:first-child {
+      > li {
+        background-color: #eeeeee;
+      }
     }
   }
 }
