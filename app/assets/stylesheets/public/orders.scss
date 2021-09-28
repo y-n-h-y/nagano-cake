@@ -89,5 +89,100 @@ main {
         background-color: #eeeeee;
       }
     }
+    ul:not(:first-child) {
+       li:last-child {
+        text-align: center;
+          a {
+            padding: 10px 30px;
+            background-color: #00BFFF;
+            border: solid 2px #00BFFF;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #ffffff;
+            cursor: pointer;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            &:hover {
+              background-color: #ffffff;
+              color: #00BFFF;
+          }
+        }
+      }
+    }
+  }
+  .order-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .order-content_info {
+      width: 600px;
+      max-width: 100%;
+      h2 {
+        padding: 20px 0 15px 0;
+      }
+      dl {
+        display: flex;
+        dt {
+          width: 150px;
+          padding: 15px 0;
+          background-color: #eeeeee;
+          border: solid 1px #888888;
+        }
+        dd {
+          width: 450px;
+          padding: 15px 0;
+          border: solid 1px #888888;
+        }
+      }
+    }
+    .order-content_price {
+      width: 350px;
+      max-width: 100%;
+      h2 {
+        padding: 20px 0 15px 0;
+      }
+      dl {
+        display: flex;
+        dt {
+          width: 150px;
+          padding: 15px 0;
+          background-color: #eeeeee;
+          border: solid 1px #888888;
+        }
+        dd {
+          width: 150px;
+          padding: 15px 0;
+          border: solid 1px #888888;
+        }
+      }
+    }
+  }
+  .order-content_inner {
+    padding-bottom: 50px;
+    h2 {
+      padding: 40px 0 15px 0;
+    }
+    ul {
+      display: flex;
+      li:first-child {
+        width: 400px;
+      }
+      li:nth-child(2) {
+        width: 150px;
+      }
+      li:nth-child(3),
+      li:last-child {
+        width: 100px;
+      }
+      li {
+        padding: 15px 0;
+        border: solid 1px #888888;
+      }
+    }
+    ul:nth-child(2) {
+      li {
+        background-color: #eeeeee;
+      }
+    }
   }
 }
