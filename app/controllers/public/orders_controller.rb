@@ -65,8 +65,8 @@ class Public::OrdersController < ApplicationController
     @order_details = OrderDetail.where(order_id: params[:id])
     @order_detail = OrderDetail.find(params[:id])
     @total = 0
-    @order_details.each do |o|
-      total = o.subtotal
+    @order_details.each do |order_detail|
+      total = order_detail.subtotal
     @total += total
     end
   end
