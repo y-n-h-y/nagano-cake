@@ -63,10 +63,11 @@ class Public::OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @order_details = OrderDetail.where(order_id: params[:id])
+    @order_detail = OrderDetail.find(params[:id])
     @total = 0
-    @order_details.each do |order_detail|
-    @subtotal = order_detail.price * order_detail.amount
-    @total += @subtotal
+    @order_details.each do |o|
+      total = o.subtotal
+    @total += total
     end
   end
   
