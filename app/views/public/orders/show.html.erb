@@ -44,11 +44,13 @@
         <li>個数</li>
         <li>小計</li>
       </ul>
+      <% @order_details.each do |order_detail| %>
       <ul>
-        <li><%= @order_detail.item.name %></li>
-        <li><%= @order.price %></li>
-        <li><%= @order_detail.amount %></li>
+        <li><%= order_detail.item.name %></li>
+        <li><%= order_detail.price %></li>
+        <li><%= order_detail.amount %></li>
         <li><%= @subtotal %></li>
       </ul>
+      <% end %>
     </div>
 </main>
