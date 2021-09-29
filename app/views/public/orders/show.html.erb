@@ -24,7 +24,7 @@
       <h2>請求額情報</h2>
       <dl>
         <dt>商品合計</dt>
-        <dd><%= @total += @subtotal %></dd>
+        <dd><%= @total %></dd>
       </dl>
       <dl>
         <dt>配送料</dt>
@@ -49,7 +49,7 @@
         <li><%= order_detail.item.name %></li>
         <li><%= order_detail.price %></li>
         <li><%= order_detail.amount %></li>
-        <li><%= @subtotal %></li>
+        <li><%= order_detail.subtotal %></li>
       </ul>
       <% end %>
     </div>
