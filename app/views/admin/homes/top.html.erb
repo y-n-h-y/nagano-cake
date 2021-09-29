@@ -9,11 +9,12 @@
     </ul>
     <% @orders.each do |order| %>
     <ul>
-      <li><%= order.created_at %></li>
+      <li><%= order.created_at.strftime("%Y-%m-%d %H:%M:%S")  %></li>
       <li><%= order.name %></li>
-      <li><%= order.price %></li>
+      <li><%= order.order_details.sum(:amount)%></li>
       <li><%= order.status_i18n %></li>
     </ul>
     <% end %>
+    <%= paginate @orders %>
   </div>
 </main>
