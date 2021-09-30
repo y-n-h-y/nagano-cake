@@ -3,6 +3,11 @@ class Admin::OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @order_details = OrderDetail.where(order_id: params[:id])
     @order_customer = @order.customer_id
+    @total = 0
+    @order_details.each do |order_detail|
+      total = order_detail.subtotal
+    @total += total
+    end
   end
 
   def update
