@@ -51,5 +51,19 @@
       </ul>
       <% end %>
     </div>
+    <div class="order-product_price">
+      <dl>
+        <dt>商品合計</dt>
+        <dd><%= @total %></dd>
+      </dl>
+      <dl>
+        <dt>送料</dt>
+        <dd><%= @order.postage %></dd>
+      </dl>
+      <dl>
+        <dt>請求金額合計</dt>
+        <dd><%= @order.price %></dd>
+      </dl>
+    </div>
   </div>
 </main>
