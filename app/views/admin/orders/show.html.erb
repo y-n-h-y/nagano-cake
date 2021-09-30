@@ -1,2 +1,25 @@
-<h1>Admin::Orders#show</h1>
-<p>Find me in app/views/admin/orders/show.html.erb</p>
+<main>
+  <h1>注文履歴詳細</h1>
+  <div class="order-history">
+    <dl>
+      <dt>購入者</dt>
+      <dd><%= link_to @order.reload_customer.full_name, admin_customer_path(@order_customer) %></dd>
+    </dl>
+    <dl>
+      <dt>注文日</dt>
+      <dd><%= @order.created_at.strftime("%Y-%m-%d") %></dd>
+    </dl>
+    <dl>
+      <dt>配送先</dt>
+      <dd>〒<%= @order.postal_code %><%= @order.address %><br><%= @order.name %></dd>
+    </dl>
+    <dl>
+      <dt>支払方法</dt>
+      <dd><%= @order.payment_i18n %></dd>
+    </dl>
+    <dl>
+      <dt></dt>
+      <dd></dd>
+    </dl>
+  </div>
+</main>
