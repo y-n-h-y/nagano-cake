@@ -7,5 +7,111 @@ main {
       padding: 10px 0;
     }
   }
-  
+  .order-history {
+    dl {
+      display: flex;
+      padding-bottom: 20px;
+      dt {
+        width: 150px;
+      }
+      dd {
+        select {
+          width: 130px;
+          height: 40px;
+          padding-left: 20px;
+        }
+        .button {
+          width: 60px;
+          height: 40px;
+          background-color: #228B22;
+          border: solid 2px #228B22;
+          border-radius: 3px;
+          color: #ffffff;
+          cursor: pointer;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          &:hover {
+            background-color: #ffffff;
+            color: #228B22;
+          }
+        }
+      }
+    }
+  }
+  .order-product {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 50px 0;
+    .order-product_content {
+      border-bottom: solid 1px #eeeeee;
+      ul {
+        display: flex;
+        li {
+          padding: 15px 0 15px 10px;
+        }
+        li:first-child,
+        li:last-child {
+          width: 250px;
+        }
+        li:nth-child(2) {
+          width: 150px;
+        }
+        li:nth-child(3),
+        li:nth-child(4) {
+          width: 100px;
+        }
+      }
+      ul:first-child {
+        li {
+          font-weight: bold;
+          background-color: #eeeeee;
+        }
+      }
+      ul:not(:first-child) {
+        li:last-child {
+          select {
+            width: 100px;
+            height: 30px;
+          }
+          .button {
+            width: 60px;
+            height: 30px;
+            background-color: #228B22;
+            border: solid 2px #228B22;
+            border-radius: 3px;
+            color: #ffffff;
+            cursor: pointer;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            &:hover {
+              background-color: #ffffff;
+              color: #228B22;
+            }
+          }
+        }
+      }
+    }
+    .order-product_price {
+      align-self: end;
+      dl {
+        display: flex;
+        padding: 10px 0;
+        dt {
+          width: 120px;
+          font-weight: bold;
+          font-size: 1.1rem;
+        }
+        dd {
+          width: 80px;
+          padding-left: 10px;
+          font-size: 1.1rem;
+        }
+      }
+      dl:last-child {
+        dd {
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }
