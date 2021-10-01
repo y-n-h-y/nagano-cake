@@ -43,6 +43,11 @@
           </ul>
         </nav>
       </div>
+      <div class="search">
+        <%= form_with local:true do |f| %>
+        <%= text_field_tag :search, placeholder: "ニックネーム" %>
+        <% end %>
+      </div>
     </header>
     <div class="top-space"></div>
     <%= yield %>
