@@ -1,3 +1,71 @@
 // Place all the styles related to the admin/genres controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+main {
+  .genre-form {
+    p {
+      display: inline;
+      padding-right: 30px;
+      font-size: 1.1rem;
+    }
+    input[type=text] {
+      width: 200px;
+      height: 35px;
+    }
+    .button {
+      width: 100px;
+      height: 35px;
+      margin-left: 30px;
+      background-color: #228B22;
+      border: solid 2px #228B22;
+      border-radius: 3px;
+      color: #ffffff;
+      cursor: pointer;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      &:hover {
+        background-color: #ffffff;
+        color: #228B22;
+        }
+      }
+    }
+    .genre-list {
+      width: 400px;
+      max-width: 100%;
+      padding: 50px 0;
+      h3 {
+        padding: 15px 0 15px 20px;
+        border-top: solid 1px #C0C0C0;
+        border-bottom: solid 1px #C0C0C0;
+        background-color: #eeeeee;
+      }
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          padding: 15px 0 15px 20px;
+          border-bottom: solid 1px #C0C0C0;
+          p {
+            width: 250px;
+          }
+          a {
+              padding: 8px 25px;
+              background-color: #228B22;
+              border: solid 2px #228B22;
+              border-radius: 5px;
+              text-decoration: none;
+              font-size: 0.9rem;
+              color: #ffffff;
+              cursor: pointer;
+              -webkit-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+              &:hover {
+                background-color: #ffffff;
+                color: #228B22;
+              }
+          }  
+        }
+      }
+    }
+  }
