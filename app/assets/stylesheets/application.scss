@@ -74,6 +74,20 @@ header {
       }
     }
   }
+  .search {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-align: right;
+    form {
+      input[type=text] {
+        width: 200px;
+        height: 30px;
+        border-radius: 2px;
+        border: solid 0;
+      }
+    }
+  }
 }
 .top-space {
   height: 80px;
