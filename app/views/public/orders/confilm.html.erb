@@ -1,7 +1,7 @@
 <main>
   <h1>注文情報確認</h1>
   <div class="order-item">
-    <div class="order-item_name">
+    <div class="order-item_list">
       <ul>
         <li>商品名</li>
         <li>単価（税込）</li>
@@ -36,13 +36,21 @@
     </div>
   </div>
   <div class="order-info">
-  <div>
-    <%= @order.payment_i18n %>
-  </div>
-  <div>
-    <p><%= @order.postal_code %><%= @order.address %></p>
-    <p><%= @order.name %></p>
-  </div>
+    <div>
+      <dl>
+        <dt>支払い方法</dt>
+        <dd><%= @order.payment_i18n %></dd>
+      </dl>
+    </div>
+    <div>
+      <dl>
+        <dt>お届け先</dt>
+        <dd>
+          <p><%= @order.postal_code %><%= @order.address %></p>
+          <p><%= @order.name %></p>
+        </dd>
+      </dl>
+    </div>
   </div>
   <div class="complete-action">
     <%= form_with model: @order, url: {action: 'create'}, local:true do |f| %>

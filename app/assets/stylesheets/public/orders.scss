@@ -124,13 +124,13 @@ main {
         display: flex;
         dt {
           width: 150px;
-          padding: 15px 0;
+          padding: 15px 0 15px 5px;
           background-color: #eeeeee;
           border: solid 1px #888888;
         }
         dd {
           width: 450px;
-          padding: 15px 0;
+          padding: 15px 0 15px 5px;
           border: solid 1px #888888;
         }
       }
@@ -145,13 +145,13 @@ main {
         display: flex;
         dt {
           width: 150px;
-          padding: 15px 0;
+          padding: 15px 0 15px 5px;
           background-color: #eeeeee;
           border: solid 1px #888888;
         }
         dd {
           width: 150px;
-          padding: 15px 0;
+          padding: 15px 0 15px 5px;
           border: solid 1px #888888;
         }
       }
@@ -175,7 +175,7 @@ main {
         width: 100px;
       }
       li {
-        padding: 15px 0;
+        padding: 15px 0 15px 5px;
         border: solid 1px #888888;
       }
     }
@@ -184,5 +184,83 @@ main {
         background-color: #eeeeee;
       }
     }
+  }
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    .order-item_list {
+      ul {
+        display: flex;
+        li {
+          max-width: 100%;
+          padding: 15px 0 15px 5px;
+          border: solid 1px #888888;
+        }
+        li:first-child {
+          display: flex;
+          align-items: center;
+          width: 350px;
+          img {
+            width: 50px;
+          }
+        }
+        li:not(:first-child) {
+          width: 150px;
+        }
+      }
+      ul:first-child {
+        li {
+          background-color: #eeeeee;
+        }
+      }
+    }
+    .order-item_price {
+      dl {
+        display: flex;
+        dt,
+        dd {
+          width: 150px;
+          max-width: 100%;
+          padding: 15px 0 15px 5px;
+          border: solid 1px #888888;
+        }
+        dt {
+          background-color: #eeeeee;
+        }
+      }
+    }
+  }
+  .order-info {
+    padding: 10px 0;
+    > div {
+      padding: 10px 0;
+      dl {
+        display: flex;
+        dt {
+          width: 100px;
+          font-weight: bold;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+  .complete-action {
+    padding-top: 50px;
+    text-align: center;
+      input[type=submit] {
+        width: 150px;
+        height: 40px;
+        background-color: #228B22;
+        border: solid 2px #228B22;
+        border-radius: 5px;
+        color: #ffffff;
+        cursor: pointer;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        &:hover {
+          background-color: #ffffff;
+          color: #228B22;
+        }
+      }
   }
 }
