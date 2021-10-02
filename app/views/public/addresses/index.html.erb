@@ -1,7 +1,13 @@
 <main>
+  <% if @address.errors.any? %>
+    <h3><%= @address.errors.count %>件のエラーが発生しました</h3>
+    <% @address.errors.full_messages.each do |message| %>
+      <p class="validate"><%= message %></p>
+    <% end %>
+  <% end %>
   <h1>配送先登録/一覧</h1>
   <div class="form">
-    <%= form_with model: @addresse, url:addresses_path, local:true do |f| %>
+    <%= form_with model: @address, url:addresses_path, local:true do |f| %>
     <%= f.hidden_field :customer_id, :value => @customer.id %>
     <div class="form_group">
       <%= f.label :postal_code, "郵便番号（ハイフンなし）", class: 'address-label' %>

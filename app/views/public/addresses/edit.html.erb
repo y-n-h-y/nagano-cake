@@ -1,4 +1,10 @@
 <main>
+  <% if @address.errors.any? %>
+    <h3><%= @address.errors.count %>件のエラーが発生しました</h3>
+    <% @address.errors.full_messages.each do |message| %>
+      <p class="validate"><%= message %></p>
+    <% end %>
+  <% end %>
   <h1>配送先編集</h1>
   <div class="address-edit-form">
     <%= form_with model: @address, url:address_path(@address), local:true do |f| %>
