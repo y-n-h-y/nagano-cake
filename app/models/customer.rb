@@ -18,5 +18,9 @@ class Customer < ApplicationRecord
   
   enum is_active: { vaild: true, invaild: false }
   
+  def active_for_authentication?
+    super && (self.is_active === "vaild")
+  end
+  
   
 end
