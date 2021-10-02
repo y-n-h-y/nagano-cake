@@ -8,6 +8,13 @@ class Item < ApplicationRecord
     (self.price * 1.10).round
   end
   
+  validates :image, presence: true
+  validates :name, presence: true
+  validates :introduction, presence: true
+  validates :genre_id, presence: true
+  validates :price, presence: true
+  validates :is_active, inclusion: { in: [true, false] }
+  
   enum is_active: { onsale: true, offsale: false }
   
 end
