@@ -94,11 +94,56 @@ main {
     margin-top: -50px;
     text-align: right;
     a {
+      padding: 10px 30px;
+      background-color: #DD0000;
+      border: solid 2px #DD0000;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #ffffff;
+      cursor: pointer;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      &:hover {
+        background-color: #ffffff;
+        color: #DD0000;
+      }
+    }
+  }
+  .withdrawal {
+    padding: 100px 0;
+    text-align: center;
+    p:first-child {
+      padding-bottom: 30px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .decision {
+      padding-top: 50px;
+      a {
+        margin-right: 10px;
         padding: 10px 30px;
+        background-color: #00BFFF;
+        border: solid 2px #00BFFF;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        color: #ffffff;
+        cursor: pointer;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        &:hover {
+          background-color: #ffffff;
+          color: #00BFFF;
+        }
+      }
+      .button {
+        width: 140px;
+        height: 39px;
+        margin-left: 10px;
         background-color: #DD0000;
         border: solid 2px #DD0000;
         border-radius: 5px;
-        text-decoration: none;
+        font-size: 0.9rem;
         color: #ffffff;
         cursor: pointer;
         -webkit-transition: all .2s ease-in-out;
@@ -107,6 +152,7 @@ main {
           background-color: #ffffff;
           color: #DD0000;
         }
+      }
     }
   }
 }
