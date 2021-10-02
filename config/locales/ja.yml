@@ -25,12 +25,6 @@ ja:
     customer:
       is_active:
         vaild: '有効'
-        withdrawal: '退会'
+        invaild: '退会'
         
-  activerecord:
-    errors:
-      messages:
-        record_invalid: 'バリデーションに失敗しました: %{errors}'
-        restrict_dependent_destroy:
-          has_one: "%{record}が存在しているので削除できません"
-          has_many: "%{record}が存在しているので削除できません"
+  
