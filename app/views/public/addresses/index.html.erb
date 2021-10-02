@@ -5,15 +5,15 @@
     <%= f.hidden_field :customer_id, :value => @customer.id %>
     <div class="form_group">
       <%= f.label :postal_code, "郵便番号（ハイフンなし）", class: 'address-label' %>
-      <%= f.text_field :postal_code, class: 'form-box' %>
+      <%= f.text_field :postal_code, placeholder: "0000000", class: 'form-box' %>
     </div>
     <div class="form_group">
       <%= f.label :address, "住所", class: 'address-label' %>
-      <%= f.text_field :address, class: 'form-box' %>
+      <%= f.text_field :address, placeholder: "東京都渋谷区代々木神園町0-0", class: 'form-box' %>
     </div>
     <div class="form_group">
       <%= f.label :name, "宛名", class: 'address-label' %>
-      <%= f.text_field :name, class: 'form-box' %>
+      <%= f.text_field :name, placeholder: "令和道子", class: 'form-box' %>
     </div>
     <div class="submit-button">
       <%= f.submit "新規登録", class: 'button' %>

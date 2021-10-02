@@ -9,11 +9,11 @@
     </div>
     <div class="form_group">
       <%= f.label :name, "商品名", class: 'label' %>
-      <%= f.text_field :name, class: 'form-box' %>
+      <%= f.text_field :name, placeholder: "商品名", class: 'form-box' %>
     </div>
     <div class="form_group">
       <%= f.label :introduction, "商品説明", class: 'label' %>
-      <%= f.text_area :introduction, class: 'form-box introduction' %>
+      <%= f.text_area :introduction, placeholder: "ここに説明文を記述します。", class: 'form-box introduction' %>
     </div>
     <div class="form_group">
       <%= f.label :genre_id, "ジャンル", class: 'label' %>
@@ -21,7 +21,7 @@
     </div>
     <div class="form_group">
       <%= f.label :price, "税抜価格", class: 'label' %>
-      <%= f.text_field :price, class: 'form-box' %>円
+      <%= f.text_field :price, placeholder: "1000", class: 'form-box' %>円
     </div>
     <div class="form_group">
       <p>販売ステータス</p>
