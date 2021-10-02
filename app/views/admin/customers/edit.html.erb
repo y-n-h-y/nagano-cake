@@ -52,6 +52,15 @@
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-box' %>
       </div>
     </div>
+    <div class="form_group">
+      <p><%= f.label :is_active, "会員ステータス" %></p>
+      <div class="form_group_inner">
+        <%= f.radio_button :is_active, Customer.is_actives.key(true) %>
+        <%= f.label :is_active, Customer.is_actives_i18n[:vaild] %>
+        <%= f.radio_button :is_active, Customer.is_actives.key(false) %>
+        <%= f.label :is_active, Customer.is_actives_i18n[:invaild] %>
+      </div>
+    </div>
     <div class="submit-button">
       <%= f.submit "保存する", class: 'button' %>
     </div>
