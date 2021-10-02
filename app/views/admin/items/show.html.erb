@@ -21,6 +21,10 @@
         <p>税込価格<br>（税抜価格）</p>
         <p><%= @item.tax_price %>（<%= @item.price %>）円</p>
       </li>
+      <li>
+        <p>販売ステータス</p>
+        <p><%= @item.is_active_i18n %></p>
+      </li>
     </ul>
   </div>
   <div class="item-edit">
