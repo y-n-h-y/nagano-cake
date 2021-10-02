@@ -9,12 +9,19 @@
       <h2><%= @item.name %></h2>
       <p><%= @item.introduction %></p>
       <p>¥<%= @item.tax_price %><span class="tax">（税込）</span></p>
+      <% if customer_signed_in? %>
       <%= form_with model: @cart_item, url:cart_items_path, local:true do |f| %>
       <div class="form_group">
         <%= f.hidden_field :item_id, value: @item.id %>
         <%= f.hidden_field :customer_id, value: @customer.id %>
         <%= f.select :amount , *[1..10] %>
         <%= f.submit "カートに入れる", class: 'button' %>
+      </div>
+      <% end %>
+      <% else %>
+      <div class="sign-up-action">
+        <p>商品の購入には、会員登録が必要になります。</p>
+        <%= link_to "会員登録はこちらから", new_customer_registration_path %>
       </div>
       <% end %>
     </div>

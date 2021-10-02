@@ -32,15 +32,15 @@
       <%= f.label :新しいお届け先 %>
         <div>
         <%= f.label :postal_code, "郵便番号（ハイフンなし）" %>
-        <%= f.text_field :postal_code %>
+        <%= f.text_field :postal_code, placeholder: "0000000" %>
         </div>
         <div>
         <%= f.label :address, "住所" %>
-        <%= f.text_field :address %>
+        <%= f.text_field :address, placeholder: "東京都渋谷区代々木神園町0-0" %>
         </div>
         <div>
         <%= f.label :name, "宛名" %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, placeholder: "令和道子" %>
         </div>
       </div>
     </div>

@@ -14,7 +14,11 @@
     <header>
       <div class="containar">
         <div class="logo">
+          <% if admin_signed_in? %>
+          <%= link_to image_tag('logo.png'), admin_path %>
+          <% else %>
           <%= link_to image_tag('logo.png'), root_path %>
+          <% end %>
         </div>
       <% if customer_signed_in? %>
       <div class="customer-name">
@@ -45,7 +49,7 @@
       </div>
       <div class="search">
         <%= form_with local:true do |f| %>
-        <%= text_field_tag :search, placeholder: "ニックネーム" %>
+        <%= f.text_field :search, placeholder: "Search" %>
         <% end %>
       </div>
     </header>

@@ -6,7 +6,7 @@
   
   <div class="field">
     <%= f.label :email, "メールアドレス", class: 'label' %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-box' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "sample@example.com", class: 'form-box' %>
   </div>
 
   <div class="field">
@@ -20,5 +20,5 @@
 <% end %>
 
 <p class="sign-up-message">会員登録がお済みでない方</p>
-<p><%= render "customers/shared/links" %>から新規登録を行ってください。</p>
+<p><%= link_to "こちら", new_customer_registration_path %>から新規登録を行ってください。</p>
 </main>
