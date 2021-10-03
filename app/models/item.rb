@@ -1,12 +1,5 @@
 class Item < ApplicationRecord
   
-  validates :image, presence: true
-  validates :name, presence: true
-  validates :introduction, presence: true
-  validates :genre_id, presence: true
-  validates :price, presence: true
-  validates :is_active, inclusion: { in: [true, false] }
-  
   has_many :cart_items, dependent: :destroy
   belongs_to :genre
   attachment :image
@@ -16,5 +9,12 @@ class Item < ApplicationRecord
   end
   
   enum is_active: { onsale: true, offsale: false }
+  
+  validates :image, presence: true
+  validates :name, presence: true
+  validates :introduction, presence: true
+  validates :genre_id, presence: true
+  validates :price, presence: true
+  validates :is_active, inclusion: { in: Item.is_actives.keys }
   
 end

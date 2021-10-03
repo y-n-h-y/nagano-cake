@@ -5,6 +5,7 @@
       <h1>商品一覧<span class="count">（全<%= @count %>件)</span></h1>
       <ul>
         <% @items.each do |item| %>
+        <% if item.is_active == "onsale" %>
         <li>
           <div class="item-img">
             <%= link_to item_path(item) do %>
@@ -14,6 +15,8 @@
           <p><%= link_to item.name, item_path(item) %></p>
           <p><%= link_to item_path(item) do %>¥<%= item.price %>円<% end %></p>
         </li>
+        <% else %>
+        <% end %>
         <% end %>
       </ul>
       <%= paginate @items %>
