@@ -31,10 +31,10 @@
     </div>
     <div class="form_group">
       <p>販売ステータス</p>
-      <%= f.radio_button :is_active, Item.is_actives.key(true) %>
+      <%= f.radio_button :is_active, Item.is_actives.key(true), checked: "checked" %>
       <%= f.label :is_active, Item.is_actives_i18n[:onsale] %>
-      <%= f.radio_button :is_active, Item.is_actives.key(false) %>
-      <%= f.label :is_active, Item.is_actives_i18n[:offsale] %>
+      <%= f.radio_button :is_active, Item.is_actives.key(false)  %>
+      <%= f.label :is_active, Item.is_actives_i18n[:offsale]  %>
     </div>
     <div class="submit-button">
       <%= f.submit "新規登録", class: 'button' %>

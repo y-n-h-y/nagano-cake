@@ -16,7 +16,7 @@
     <div class="top-main_item">
       <h2>新着商品</h2>
       <ul>
-        <% @items.each do |item| %>
+        <% @items.first(4).each do |item| %>
         <li>
           <div class="item-img">
             <%= link_to item_path(item) do %>
