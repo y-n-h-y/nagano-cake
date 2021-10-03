@@ -7,7 +7,7 @@
     </dl>
     <dl>
       <dt>注文日</dt>
-      <dd><%= @order.created_at.strftime("%Y-%m-%d") %></dd>
+      <dd><%= @order.created_at.strftime("%Y/%m/%d") %></dd>
     </dl>
     <dl>
       <dt>配送先</dt>
@@ -39,9 +39,9 @@
       <% @order_details.each do |order_detail| %>
       <ul>
         <li><%= order_detail.item.name %></li>
-        <li><%= order_detail.price %></li>
+        <li><%= order_detail.price.to_s(:delimited) %></li>
         <li><%= order_detail.amount %></li>
-        <li><%= order_detail.subtotal %></li>
+        <li><%= order_detail.subtotal.to_s(:delimited) %></li>
         <li>
           <%= form_with model: order_detail, url:admin_order_detail_path, local:true do |f| %>
           <%= f.select :making_status, OrderDetail.making_statuses_i18n.invert %>
@@ -54,15 +54,15 @@
     <div class="order-product_price">
       <dl>
         <dt>商品合計</dt>
-        <dd><%= @total %></dd>
+        <dd><%= @total.to_s(:delimited) %>円</dd>
       </dl>
       <dl>
         <dt>送料</dt>
-        <dd><%= @order.postage %></dd>
+        <dd><%= @order.postage %>円</dd>
       </dl>
       <dl>
         <dt>請求金額合計</dt>
-        <dd><%= @order.price %></dd>
+        <dd><%= @order.price.to_s(:delimited) %>円</dd>
       </dl>
     </div>
   </div>

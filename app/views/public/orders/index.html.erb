@@ -14,7 +14,7 @@
       <li><%= order.created_at.strftime('%Y/%m/%d') %></li>
       <li><%= order.address %></li>
       <li><%= order.name %></li>
-      <li><%= order.price %>円</li>
+      <li><%= order.price.to_s(:delimited) %>円</li>
       <li><%= order.status_i18n %></li>
       <li><%= link_to "表示する", order_path(order) %></li>
     </ul>

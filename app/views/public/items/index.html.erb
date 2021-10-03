@@ -13,7 +13,7 @@
             <% end %>
           </div>
           <p><%= link_to item.name, item_path(item) %></p>
-          <p><%= link_to item_path(item) do %>¥<%= item.price %>円<% end %></p>
+          <p><%= link_to item_path(item) do %>¥<%= item.price.to_s(:delimited) %>円<% end %></p>
         </li>
         <% else %>
         <% end %>

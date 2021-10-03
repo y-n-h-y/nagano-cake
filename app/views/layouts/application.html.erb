@@ -58,5 +58,10 @@
       <%= content_tag(:div, value, class: "#{key} text-success") %>
     <% end %>
     <%= yield %>
+    <footer>
+      <div class="footer-logo">
+        <%= image_tag('logo.png') %>
+      </div>
+    </footer>
   </body>
 </html>

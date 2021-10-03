@@ -13,8 +13,8 @@
  *= require_tree .
  *= require_self
  */
- 
- * {
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,6 +27,7 @@ ul {
 h3 {
   padding-top: 20px;
 }
+
 .validate {
   padding: 5px 0 5px 10px;
   color: red;
@@ -97,11 +98,33 @@ header {
     }
   }
 }
+
 .top-space {
   height: 130px;
+}
+
+footer {
+  height: 100px;
+  padding-top: 100px;
+  .footer-logo {
+    height: 100px;
+    align-items: flex-end;
+    background-color: #4a1529;
+    text-align: center;
+    img {
+      width: 200px;
+      padding-top: 40px;
+      align-items: center;
+    }
+  }
 }
 
 .text-success {
   padding: 20px 0 0 20px;
   color: #00CC66;
+}
+
+.pagination {
+  padding-top: 30px;
+  text-align: center;
 }

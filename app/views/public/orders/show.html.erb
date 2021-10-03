@@ -24,7 +24,7 @@
       <h2>請求額情報</h2>
       <dl>
         <dt>商品合計</dt>
-        <dd><%= @total %></dd>
+        <dd><%= @total.to_s(:delimited) %></dd>
       </dl>
       <dl>
         <dt>配送料</dt>
@@ -32,7 +32,7 @@
       </dl>
       <dl>
         <dt>ご請求額</dt>
-        <dd><%= @order.price %></dd>
+        <dd><%= @order.price.to_s(:delimited) %></dd>
       </dl>
     </div>
   </div>
