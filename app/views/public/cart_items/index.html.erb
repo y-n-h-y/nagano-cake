@@ -15,7 +15,7 @@
   <% @cart_items.each do |cart_item| %>
   <ul class="cart-items_content">
     <li><%= attachment_image_tag cart_item.item, :image %><%= cart_item.item.name %></li>
-    <li><%= cart_item.item.tax_price %></li>
+    <li><%= cart_item.item.tax_price.to_s(:delimited) %></li>
     <li><%= form_with model: cart_item, local:true do |f| %>
         <%= f.select :amount, *[1..10] %>
         <%= f.submit "変更", class: 'amount-edit' %>
@@ -27,11 +27,11 @@
   <% end %>
   <div class="after">
     <div class="items-action">
-      <%= link_to "買い物を続ける", items_path %>
+      <%= link_to "買い物を続ける", root_path %>
     </div>
     <div class="total-price">
       <p>合計金額</p>
-      <p><%= @total %></p>
+      <p><%= @total.to_s(:delimited) %></p>
     </div>
   </div>
   <div class="cart-info">

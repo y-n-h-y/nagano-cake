@@ -5,7 +5,7 @@ class Admin::ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.page(params[:page]).order(:id)
+    @items = Item.page(params[:page]).per(10).order(:id)
   end
 
   def create

@@ -9,7 +9,7 @@
     </ul>
     <% @orders.each do |order| %>
     <ul>
-      <li><%= link_to order.created_at.strftime("%Y-%m-%d %H:%M:%S"), admin_order_path(order) %></li>
+      <li><%= link_to order.created_at.strftime("%Y/%m/%d %H:%M:%S"), admin_order_path(order) %></li>
       <li><%= order.reload_customer.full_name %></li>
       <li><%= order.order_details.sum(:amount)%></li>
       <li><%= order.status_i18n %></li>
